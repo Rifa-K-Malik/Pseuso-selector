@@ -1,0 +1,50 @@
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &_btn{
+        position: relative;
+        height: 50px;
+        width: 90px;
+        font-weight: bolder;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 2px solid black;
+        cursor: pointer;
+        // &:hover{
+        //     .container_box{
+        //         display: block;
+        //     }
+        // }
+    }
+    &_box{
+       
+        background-color: white;
+        height: 150px;
+        width: 300px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: white;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%) rotate(45deg);
+        }
+       
+    }
+    
+}
+
+.show{
+   visibility: visible;
+}
+
+.hide{
+    visibility: hidden;
+}
